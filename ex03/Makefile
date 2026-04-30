@@ -6,14 +6,14 @@
 #    By: tbez--du <tbez--du@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/07 11:38:14 by tbez--du          #+#    #+#              #
-#    Updated: 2026/04/07 12:11:55 by tbez--du         ###   ########.fr        #
+#    Updated: 2026/04/30 13:23:11 by tbez--du         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC		=	main.cpp \
-			Zombie.cpp \
-			newZombie.cpp \
-			randomChump.cpp
+			Weapon.cpp \
+			HumanA.cpp \
+			HumanB.cpp
 OBJ		=	$(SRC:.cpp=.o)
 DEP		=	$(SRC:.cpp=.d)
 

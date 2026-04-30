@@ -6,18 +6,15 @@
 #    By: tbez--du <tbez--du@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/07 11:38:14 by tbez--du          #+#    #+#              #
-#    Updated: 2026/04/07 12:11:55 by tbez--du         ###   ########.fr        #
+#    Updated: 2026/04/07 12:41:03 by tbez--du         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC		=	main.cpp \
-			Zombie.cpp \
-			newZombie.cpp \
-			randomChump.cpp
+SRC		=	main.cpp
 OBJ		=	$(SRC:.cpp=.o)
 DEP		=	$(SRC:.cpp=.d)
 
-NAME	=	zombie
+NAME	=	"reff"
 
 CC		=	clang++
 CFLAGS	=	-Wall -Werror -Wextra -std=c++98
