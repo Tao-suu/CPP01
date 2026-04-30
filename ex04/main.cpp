@@ -6,7 +6,7 @@
 /*   By: tbez--du <tbez--du@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 13:46:53 by tbez--du          #+#    #+#             */
-/*   Updated: 2026/04/30 18:55:52 by tbez--du         ###   ########.fr       */
+/*   Updated: 2026/04/30 19:04:15 by tbez--du         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,6 @@ void	print_usage( void )
 	std::cerr << "./replace <file> <s1> <s2>" << std::endl;
 	std::cerr << "\tfile: file you wanna sed" << std::endl;
 	std::cerr << "\ts1 & s2: change any occurence of s1 for s2" << std::endl;
-}
-
-std::string	replace(std::string s, std::string s1, std::string s2)
-{
-	size_t	pos			=	s.find(s1);
-
-	std::string	before	=	s.substr(0, pos);
-	std::string	after	=	s.substr(pos + s1.length());
-	return	before + s2 + after;
 }
 
 int		iter(char **argv)
@@ -59,7 +50,7 @@ int		iter(char **argv)
 			continue ;
 
 		while (line.find(argv[2]) != std::string::npos)
-			line = replace(line, std::string(argv[2]), std::string(argv[3]));
+			line = line.substr(0, line.find(argv[2])) + argv[3] + line.substr(line.find(argv[2]) + std::string(argv[2]).length());
 		out << line << std::endl;
 	}
 
